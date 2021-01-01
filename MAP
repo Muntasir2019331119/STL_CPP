@@ -1,0 +1,65 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	normal map:
+
+//always in an sorted order(by default)
+//have <key,value>format;
+//$ every key is unique..
+//every operation is based on key..
+
+	//input method:
+	map<string, int>mp;
+	for (i = 0; i < n; i++)
+	{
+		cin >> str >> k;
+		mp[str] = k;
+	}
+
+//another input process://using pair
+	{
+		mp.insert(make_pair(str, k));
+	}
+	mp["A"] += 80;
+
+//find
+	auto it = mp.find("ABC");
+	if (it == mp.end()) cout << "Not found" << endl;
+	else cout << it - first << endl
+		          //2nd way find
+		          if (mp.count("ABC") == 0) cout << "Not found" << endl;
+
+//delete
+	mp.erase(it);//it jeno mp.end() na hoy
+	mp.erase("A");//be careful , jodi na thake runtime error
+
+	// remove all elements up to
+	// element with key="B" in mp
+
+	mp.erase(mp.begin(), mp.find("B"));
+
+
+//clear: erases all elemnt of the map
+	mp.clear();
+
+	//printing:
+	for (auto it = mp.begin(); it != mp.end(); it++)
+	{
+		cout << it->first << " " << it->second << endl;
+	}
+
+	//or
+	 for (auto x : mp) 
+      cout << x.first << " " << x.second << endl;
+
+un_ordered map:
+
+
+every thing is same...only difference is here map is unsorted...
+
+ 
+
+
+
+}
